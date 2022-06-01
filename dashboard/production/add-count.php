@@ -9,17 +9,26 @@ if (isset($_SESSION['uid'])) {
     $sql = "select * from joinus where uid='$uid'";
     $result = $conn->query($sql);
     $row = mysqli_fetch_assoc($result);
+
+    $u_id = $row['id'];
+    $sql = "select * from `joinus-data` where u_id='$u_id'";
+    $result = $conn->query($sql);
+    $row = mysqli_fetch_assoc($result);
     $today =  date("Y-m-d");
     $last_redeemed = $row['last_redeemed'];
     $redeemed = $row['redeemed'];
     if($last_redeemed!=$today){
         $arr = array_fill(0, $length, 0);
         $add_count = implode("", $arr);
-        $sql = "update joinus set add_count='$add_count' where uid='$uid'";
+        // $sql = "update joinus set add_count='$add_count' where uid='$uid'";
+        // $conn->query($sql);
+        $sql = "update `joinus-data` set add_count='$add_count' where u_id='$u_id'";
         $conn->query($sql);
-        $sql = "select * from joinus where uid='$uid'";
-        $result = $conn->query($sql);
-        $row = mysqli_fetch_assoc($result);
+        // $sql = "select * from joinus where uid='$uid'";
+        // $result = $conn->query($sql);
+        // $sql = "select * from `joinus-data` where u_id='$u_id'";
+        // $result = $conn->query($sql);
+        // $row = mysqli_fetch_assoc($result);
     }
     $add_count = $row['add_count'];
     $level = $row['level'];
@@ -42,7 +51,8 @@ if (isset($_SESSION['uid'])) {
     $add_count = implode("", $arr);
 
 
-    $sql = "update joinus set add_count='$add_count' where uid='$uid'";
+    // $sql = "update joinus set add_count='$add_count' where uid='$uid'";
+    $sql = "update `joinus-data` set add_count='$add_count' where u_id='$u_id'";
     $conn->query($sql);
 
     $flag = true;
@@ -58,13 +68,14 @@ if (isset($_SESSION['uid'])) {
             $last_redeemed = $today;
             $redeemed = 1 ;
 
-            $sql = "update joinus set last_redeemed='$last_redeemed' where uid='$uid'" ;
+            // $sql = "update joinus set last_redeemed='$last_redeemed' where uid='$uid'" ;
+            $sql = "update `joinus-data` set last_redeemed='$last_redeemed' where u_id='$u_id'";
             $conn->query($sql);
 
             $sql = "update `joinus-data` set wallet=wallet+'45' where ref_code='$ref_code'";
             $conn->query($sql);
-            $sql = "update `joinus` set wallet=wallet+'45' where uid='$uid'";
-            $conn->query($sql);
+            // $sql = "update `joinus` set wallet=wallet+'45' where uid='$uid'";
+            // $conn->query($sql);
 
             $sql = "select * from `joinus-data` where my_ref_code='$ref_code'";
             $result = $conn->query($sql);
@@ -79,8 +90,8 @@ if (isset($_SESSION['uid'])) {
                 }
                 $sql = "update `joinus-data` set wallet=wallet+'$inc' where my_ref_code='$ref_code'";
                 $conn->query($sql);
-                $sql = "update `joinus` set wallet=wallet+'$inc' where my_ref_code='$ref_code'";
-                $conn->query($sql);
+                // $sql = "update `joinus` set wallet=wallet+'$inc' where my_ref_code='$ref_code'";
+                // $conn->query($sql);
                 $i++;
                 $sql = "select * from `joinus-data` where my_ref_code = '$ref_code'";
                 $result = $conn->query($sql);

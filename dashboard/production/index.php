@@ -17,8 +17,9 @@ if (isset($_SESSION['uid'])) {
   $my_ref = $data['my_ref_code'];
   $wallet = $data['wallet'];
   $level = $data['level'];
+  $u_id = $data['id'];
 
-  $sql = "select * from `joinus-data` where u_id='$uid'";
+  $sql = "select * from `joinus-data` where u_id='$u_id'";
   $result = $conn->query($sql);
   $row = mysqli_fetch_assoc($result);
 
@@ -54,6 +55,18 @@ if (isset($_SESSION['uid'])) {
       echo '<script>alert("Successfully, updated !!!")</script>';
     } else {
       echo '<script>alert("Oops! Something went wrong...")</script>';
+    }
+  }
+  if(isset($_POST['widthdraw-money'])){
+    $money = $_POST['money'];
+    if($money > $row['wallet']){
+      echo "<script>alert('You do not have enough amount in your wallet.');</script>";
+    }else{
+      $sql = "update `joinus-data` set widthdraw='$money' where u_id='$u_id'";
+      if($conn->query($sql)){
+        echo "<script>alert('Your money will be credited in an hour');</script>";
+      }else
+      echo "<script>alert('Server Down. Please try again later.');</script>";
     }
   }
 }
@@ -341,9 +354,18 @@ if (isset($_SESSION['uid'])) {
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">&nbsp;Your Current Balance:</h5>
         </div>
-        <form>
+        <form method="post">
           <div class="modal-body">
-            <h3><?php echo $wallet; ?>.0/-</h3>
+            <h3><?php echo $row['wallet']; ?>.0/-</h3>
+            <button class="btn btn-primary m-auto" id="widthdraw-button" onclick="widthdraw()">Widthdraw</button>
+            <div id="widthdraw-form">
+
+              <form action="" class="form" >
+                <input type="number" name="money" class="form-control" required placeholder="Enter Amount">
+                <button class="btn btn-danger m-2">Cancel</button>
+                <button type="submit" class="btn btn-success m-2" name="widthdraw-money">Submit</button>
+              </form>
+            </div>
           </div>
         </form>
       </div>
@@ -1051,39 +1073,39 @@ if (isset($_SESSION['uid'])) {
         event.preventDefault()
       });
 
-      function getCookie(user) {
-        var cookieArr = document.cookie.split(";");
-        for (var i = 0; i < cookieArr.length; i++) {
-          var cookiePair = cookieArr[i].split("=");
-          if (user == cookiePair[0].trim()) {
-            return decodeURIComponent(cookiePair[1]);
-          }
-        }
-        return null;
-      }
+      // function getCookie(user) {
+      //   var cookieArr = document.cookie.split(";");
+      //   for (var i = 0; i < cookieArr.length; i++) {
+      //     var cookiePair = cookieArr[i].split("=");
+      //     if (user == cookiePair[0].trim()) {
+      //       return decodeURIComponent(cookiePair[1]);
+      //     }
+      //   }
+      //   return null;
+      // }
 
-      function addSeen(arr, length, uid) {
-        for (var i = 1; i <= length; i++) {
-          if (arr[i] == 0) {
-            return;
-          }
-        }
-        if (arr[0] == 0) {
+      // function addSeen(arr, length, uid) {
+      //   for (var i = 1; i <= length; i++) {
+      //     if (arr[i] == 0) {
+      //       return;
+      //     }
+      //   }
+      //   if (arr[0] == 0) {
 
-          $.post('changewallet.php', {
-            userid: uid
-          })
-          arr[0] = 1;
-          var d = new Date();
-          var length = 9;
-          d.setDate(d.getDate() + 1);
-          const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-          let day = days[d.getDay()];
-          const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-          let month = months[d.getMonth()];
-          document.cookie = uid + "=" + arr + "; expires=" + day + ", " + d.getDate() + month + d.getFullYear() + "00:00:00 UTC";
-        }
-      }
+      //     $.post('changewallet.php', {
+      //       userid: uid
+      //     })
+      //     arr[0] = 1;
+      //     var d = new Date();
+      //     var length = 9;
+      //     d.setDate(d.getDate() + 1);
+      //     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      //     let day = days[d.getDay()];
+      //     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      //     let month = months[d.getMonth()];
+      //     document.cookie = uid + "=" + arr + "; expires=" + day + ", " + d.getDate() + month + d.getFullYear() + "00:00:00 UTC";
+      //   }
+      // }
 
       function seeadd(d) {
         var addno = $(d).data('value');
@@ -1095,28 +1117,42 @@ if (isset($_SESSION['uid'])) {
             length : length ,
             addno : addno
           })
-        d.setDate(d.getDate() + 1);
-        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let day = days[d.getDay()];
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        let month = months[d.getMonth()];
-        if (!getCookie(uid)) {
-          var arr = [];
-          for (var i = 0; i <= length; i++) {
-            arr[i] = 0;
-          }
-          document.cookie = uid + "=" + arr + "; expires=" + day + ", " + d.getDate() + month + d.getFullYear() + "00:00:00 UTC";
-        }
-        var mycookie = getCookie(uid);
-        var arr = mycookie.split(',');
+        // d.setDate(d.getDate() + 1);
+        // const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        // let day = days[d.getDay()];
+        // const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        // let month = months[d.getMonth()];
+        // if (!getCookie(uid)) {
+        //   var arr = [];
+        //   for (var i = 0; i <= length; i++) {
+        //     arr[i] = 0;
+        //   }
+        //   document.cookie = uid + "=" + arr + "; expires=" + day + ", " + d.getDate() + month + d.getFullYear() + "00:00:00 UTC";
+        // }
+        // var mycookie = getCookie(uid);
+        // var arr = mycookie.split(',');
 
-        arr[addno] = 1;
+        // arr[addno] = 1;
 
-        document.cookie = uid + "=" + arr + "; expires=" + day + ", " + d.getDate() + month + d.getFullYear() + "00:00:00 UTC";
-        console.log(arr);
+        // document.cookie = uid + "=" + arr + "; expires=" + day + ", " + d.getDate() + month + d.getFullYear() + "00:00:00 UTC";
+        // console.log(arr);
 
         // addSeen(arr, length, uid);
 
+      }
+    </script>
+    <script>
+      var form = document.getElementById('widthdraw-form');
+      var button = document.getElementById('widthdraw-button');
+      form.style.display = "none";
+      button.style.display = "block";
+      document.getElementById("widthdraw-button").addEventListener("click", function(event){
+  event.preventDefault()
+});
+      function widthdraw(){
+        form.style.display = "block";
+        button.style.display = "none";
+        // alert("He,lo");
       }
     </script>
 
