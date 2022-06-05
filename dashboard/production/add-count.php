@@ -15,7 +15,9 @@ if (isset($_SESSION['uid'])) {
     $result = $conn->query($sql);
     $row = mysqli_fetch_assoc($result);
     $today =  date("Y-m-d");
-    $last_redeemed = $row['last_redeemed'];
+    
+    $last_redeemed = date("Y-m-d",strtotime($row['last_redeemed']));
+
     $redeemed = $row['redeemed'];
     if($last_redeemed!=$today){
         $arr = array_fill(0, $length, 0);
