@@ -20,7 +20,10 @@
                 Status: <?php echo $status; ?>
             </li>
             <li class="nav-item" style="padding-right: 55px; font-size: 20px; color: black;"> 
-                Ref Code: <?php echo $my_ref; ?>
+               My Ref Code: <?php echo $my_ref_code; ?>
+            </li>
+             <li class="nav-item" style="padding-right: 55px; font-size: 20px; color: black;"> 
+                Ref Code: <?php echo $ref_code; ?>
             </li>
         </ul>
     </nav>
