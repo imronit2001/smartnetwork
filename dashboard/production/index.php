@@ -23,7 +23,10 @@ if (isset($_SESSION['uid'])) {
   $result = $conn->query($sql);
   $row = mysqli_fetch_assoc($result);
   $today =  date("Y-m-d");
-  if($today!=$row['last_redeemed']&&$row['redeemed']==1){
+  
+  $redeemed_date=date("Y-m-d",strtotime($row['last_redeemed']));
+  
+  if($today!=$redeemed_date&&$row['redeemed']==1){
     $sql = "update `joinus-data` set add_count='',redeemed=0 where u_id='$u_id'";
     $conn->query($sql);
   }
