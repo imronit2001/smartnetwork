@@ -14,12 +14,7 @@ jobs:
     
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ftp.smartnetwork.org.in
-        username: ftp1@smartnetwork.org.in
-        password: J*clg+2)M?8d
-          
-      
-#         server: ${{ secrets.FTP_SERVER }}
-#         username: ${{ secrets.FTP_USERNAME }}
-#         password: ${{ secrets.FTP_PASSWORD }}
+      with:         
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
