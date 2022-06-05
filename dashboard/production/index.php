@@ -22,6 +22,11 @@ if (isset($_SESSION['uid'])) {
   $sql = "select * from `joinus-data` where u_id='$u_id'";
   $result = $conn->query($sql);
   $row = mysqli_fetch_assoc($result);
+  $today =  date("Y-m-d");
+  if($today!=$row['last_redeemed']&&$row['redeemed']==1){
+    $sql = "update `joinus-data` set add_count='',redeemed=0 where u_id='$u_id'";
+    $conn->query($sql);
+  }
 
 
   // END OF USER DATA COLLECTION FORM DB
