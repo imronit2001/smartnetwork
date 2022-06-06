@@ -19,7 +19,7 @@ if (isset($_SESSION['uid'])) {
   $wallet = $data['wallet'];
   $level = $data['level'];
   $u_id = $data['id'];
-
+  date_default_timezone_set('Asia/Kolkata');
   $sql = "select * from `joinus-data` where u_id='$u_id'";
   $result = $conn->query($sql);
   $row = mysqli_fetch_assoc($result);
