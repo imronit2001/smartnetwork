@@ -8,13 +8,14 @@ if (isset($_SESSION['uid'])) {
   $sql = "SELECT * FROM joinus WHERE uid = '$uid'";
   $res = $conn->query($sql);
   $data = mysqli_fetch_assoc($res);
+  
   $my_ref_code = $data['my_ref_code'];
   $fname = $data['fname'];
   $lname = $data['lname'];
   $name = $fname . " " . $lname;
   $status = $data['status'];
   $txn = $data['txn_id'];
-  $my_ref = $data['my_ref_code'];
+  $ref_code = $data['ref_code'];
   $wallet = $data['wallet'];
   $level = $data['level'];
   $u_id = $data['id'];
@@ -22,9 +23,11 @@ if (isset($_SESSION['uid'])) {
   $sql = "select * from `joinus-data` where u_id='$u_id'";
   $result = $conn->query($sql);
   $row = mysqli_fetch_assoc($result);
-  date_default_timezone_set("Asia/Kolkata");
   $today =  date("Y-m-d");
-  if($today!=$row['last_redeemed']&&$row['redeemed']==1){
+  
+  $redeemed_date=date("Y-m-d",strtotime($row['last_redeemed']));
+  
+  if($today!=$redeemed_date&&$row['redeemed']==1){
     $sql = "update `joinus-data` set add_count='',redeemed=0 where u_id='$u_id'";
     $conn->query($sql);
   }

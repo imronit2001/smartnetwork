@@ -22,6 +22,11 @@
                 <i class="fa fa-inr"></i>My Wallet
             </a>
         </li>
+        <li>
+            <a href="transactions.php">
+                <i class="fa fa-clone"></i>Transactions
+            </a>
+        </li>
          <li data-bs-toggle="modal" data-bs-target="#exampleModal">
             <a href="./change_password.php">
                 <i class="fa fa-password"></i>Change Password
