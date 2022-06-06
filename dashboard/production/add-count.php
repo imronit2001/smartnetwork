@@ -14,12 +14,11 @@ if (isset($_SESSION['uid'])) {
     $sql = "select * from `joinus-data` where u_id='$u_id'";
     $result = $conn->query($sql);
     $row = mysqli_fetch_assoc($result);
+    date_default_timezone_set("Asia/Kolkata");
     $today =  date("Y-m-d");
-    
-    $last_redeemed = date("Y-m-d",strtotime($row['last_redeemed']));
-
+    $last_redeemed = $row['last_redeemed'];
     $redeemed = $row['redeemed'];
-    if($last_redeemed!=$today){
+    if ($last_redeemed != $today) {
         $arr = array_fill(0, $length, 0);
         $add_count = implode("", $arr);
         // $sql = "update joinus set add_count='$add_count' where uid='$uid'";
@@ -66,15 +65,21 @@ if (isset($_SESSION['uid'])) {
     }
     if ($flag) {
 
-        if (($last_redeemed != $today || $last_redeemed=="" || $last_redeemed==NULL)) {
+        if (($last_redeemed != $today || $last_redeemed == "" || $last_redeemed == NULL)) {
             $last_redeemed = $today;
-            $redeemed = 1 ;
+            // $redeemed = 1 ;
 
             // $sql = "update joinus set last_redeemed='$last_redeemed' where uid='$uid'" ;
             $sql = "update `joinus-data` set last_redeemed='$last_redeemed' where u_id='$u_id'";
             $conn->query($sql);
 
             $sql = "update `joinus-data` set wallet=wallet+'45' where ref_code='$ref_code'";
+            $conn->query($sql);
+
+            $sql = "INSERT INTO `transactions`(`u_id`, `mode`, `amount`) VALUES ('$u_id','1','45')";
+            $conn->query($sql);
+
+            $sql = "update `joinus-data` set redeemed=1 where ref_code='$ref_code'";
             $conn->query($sql);
             // $sql = "update `joinus` set wallet=wallet+'45' where uid='$uid'";
             // $conn->query($sql);
@@ -92,6 +97,14 @@ if (isset($_SESSION['uid'])) {
                 }
                 $sql = "update `joinus-data` set wallet=wallet+'$inc' where my_ref_code='$ref_code'";
                 $conn->query($sql);
+
+                $sql = "select * from `joinus-data` where my_ref_code = '$ref_code'";
+                $result = $conn->query($sql);
+                $row = $result->fetch_assoc();
+                $a = $row['u_id'];
+                $sql = "INSERT INTO `transactions`(`u_id`, `mode`, `amount`) VALUES ('$a','1','$inc')";
+                $conn->query($sql);
+
                 // $sql = "update `joinus` set wallet=wallet+'$inc' where my_ref_code='$ref_code'";
                 // $conn->query($sql);
                 $i++;
