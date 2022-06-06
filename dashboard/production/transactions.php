@@ -4,17 +4,19 @@ if (isset($_SESSION['uid'])) {
   include("../../dbconfig.php");
   $uid = $_SESSION['uid'];
 
+
   // GET USER DATA FOR NOW NAME ONLY.
   $sql = "SELECT * FROM joinus WHERE uid = '$uid'";
   $res = $conn->query($sql);
   $data = mysqli_fetch_assoc($res);
+  
   $my_ref_code = $data['my_ref_code'];
   $fname = $data['fname'];
   $lname = $data['lname'];
   $name = $fname . " " . $lname;
   $status = $data['status'];
   $txn = $data['txn_id'];
-  $my_ref = $data['my_ref_code'];
+  $ref_code = $data['ref_code'];
   $wallet = $data['wallet'];
   $level = $data['level'];
   $u_id = $data['id'];
@@ -22,6 +24,9 @@ if (isset($_SESSION['uid'])) {
   $sql = "select * from `joinus-data` where u_id='$u_id'";
   $result = $conn->query($sql);
   $row = mysqli_fetch_assoc($result);
+  $today =  date("Y-m-d");
+  
+  $redeemed_date=date("Y-m-d",strtotime($row['last_redeemed']));
 
 
   // END OF USER DATA COLLECTION FORM DB
