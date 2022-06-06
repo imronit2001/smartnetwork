@@ -7,7 +7,7 @@
         </div>
         <form action="?" method="POST">
         <div class="modal-body">
-        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_JFxdlfwhhqtxUd" async> </script> </form>
+      <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_JdrCm72onsLN9B" async> </script> </form>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

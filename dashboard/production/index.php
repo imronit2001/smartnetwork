@@ -8,13 +8,14 @@ if (isset($_SESSION['uid'])) {
   $sql = "SELECT * FROM joinus WHERE uid = '$uid'";
   $res = $conn->query($sql);
   $data = mysqli_fetch_assoc($res);
+  
   $my_ref_code = $data['my_ref_code'];
   $fname = $data['fname'];
   $lname = $data['lname'];
   $name = $fname . " " . $lname;
   $status = $data['status'];
   $txn = $data['txn_id'];
-  $my_ref = $data['my_ref_code'];
+  $ref_code = $data['ref_code'];
   $wallet = $data['wallet'];
   $level = $data['level'];
   $u_id = $data['id'];
