@@ -371,6 +371,7 @@ if (isset($_SESSION['uid'])) {
 
               <form action="" class="form" >
                 <input type="number" name="money" class="form-control" required placeholder="Enter Amount">
+                <input type="text" name="upi" class="form-control" required placeholder="your@upi">
                 <button class="btn btn-danger m-2">Cancel</button>
                 <button type="submit" class="btn btn-success m-2" name="widthdraw-money">Submit</button>
               </form>
@@ -501,19 +502,19 @@ if (isset($_SESSION['uid'])) {
           <div class="gallery_scroller no_snap">
             <input type="hidden" name="uid" id="uid" value="<?php echo $uid; ?>">
             <div class="colored_card">
-              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="1" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+              <p></p> <a href="//thaudray.com/4/5144612" target="_blank" data-value="1" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
             </div>
             <div class="colored_card">
-              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="2" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+              <p></p> <a href="//thaudray.com/4/5144612" target="_blank" data-value="2" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
             </div>
             <div class="colored_card">
-              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="3" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+              <p></p> <a href="//ashoupsu.com/4/5136581" target="_blank" data-value="3" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
             </div>
             <div class="colored_card">
-              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="4" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+              <p></p> <a href="//dooloust.net/4/5136549" target="_blank" data-value="4" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
             </div>
             <div class="colored_card">
-              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="5" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+              <p></p> <a href="//thaudray.com/4/5144619" target="_blank" data-value="5" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
             </div>
             <div class="colored_card">
               <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="6" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
@@ -527,12 +528,196 @@ if (isset($_SESSION['uid'])) {
             <div class="colored_card">
               <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="9" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
             </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="10" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="11" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="12" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="13" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="14" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="15" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="16" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="17" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="18" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="19" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="20" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="21" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="22" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="23" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="24" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="25" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="26" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="27" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="28" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="29" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="30" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="31" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="32" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="33" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="34" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="35" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="36" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="37" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="38" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="39" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="40" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="41" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="42" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="43" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="44" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="45" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="46" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="47" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="48" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="49" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="50" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+            
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="51" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="52" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="53" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="54" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="55" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="56" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="57" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="58" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="59" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="60" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="61" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="62" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="63" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="64" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="65" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="66" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="67" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="68" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="69" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
+             <div class="colored_card">
+              <p></p> <a href="//zikroarg.com/4/5051836" target="_blank" data-value="70" class="addlink" onclick="seeadd(this);">ClickToSeeAd</a>
+            </div>
             <!------adsence----->
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7556331893650213" crossorigin="anonymous"></script>
             <!----close---->
           </div>
         </div>
-
+   
         <!----AdBlock special---->
         <br><br>
         <!------AdBlock specialclose---->
@@ -774,10 +959,7 @@ if (isset($_SESSION['uid'])) {
                   </li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Settings 1</a>
-                      <a class="dropdown-item" href="#">Settings 2</a>
-                    </div>
+                    
                   </li>
                   <li><a class="close-link"><i class="fa fa-close"></i></a>
                   </li>
@@ -788,26 +970,7 @@ if (isset($_SESSION['uid'])) {
 
                 <div id="graph_bar" style="width:100%; height:200px;"></div>
 
-                <div class=" bg-white progress_summary">
-
-                  <div class="row">
-                    <div class="progress_title">
-                      <span class="left">Escudor Wireless 1.0</span>
-                      <span class="right">This sis</span>
-                      <div class="clearfix"></div>
-                    </div>
-
-                    <div class="">
-                      <span>SSD</span>
-                    </div>
-                    <div class="">
-                      <div class="progress progress_sm">
-                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="89"></div>
-                      </div>
-                    </div>
-                    <div class=" more_info">
-                      <span>89%</span>
-                    </div>
+               
                   </div>
                   <div class="row">
                     <div class="progress_title">
