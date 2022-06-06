@@ -477,10 +477,12 @@ if (isset($_SESSION['uid'])) {
                       <tbody>
                         <?php
                         while ($r = mysqli_fetch_assoc($result)) {
+                          $dt =strtotime($r['date']);
+
                         ?>
                           <tr>
-                            <td><?php echo $r['date']; ?></td>
-                            <td><?php echo $r['time']; ?></td>
+                            <td><?php echo date('d-m-Y',$dt); ?></td>
+                            <td><?php echo date('H:i:s',$dt); ?></td>
                             <?php if ($r['mode'] == 0) {
                               echo '<td class="text-danger"> - ' . $r['amount'] . '</td>';
                             } else {
