@@ -2,16 +2,27 @@
     <div class="menu_section">
     <h3>Dashboard</h3>
     <ul class="nav side-menu">
+        
         <li>
             <a href="index.php">
                 <i class="fa fa-home"></i> Home
             </a>
         </li>
-        <li data-bs-toggle="modal" data-bs-target="#exampleModal2">
-            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                <i class="fa fa-money"></i>Pay
-            </a>
+        <li>
+        <form>
+    <button style="background-color: transparent;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;" type="submit" formaction="https://rzp.io/l/8usToKi">Pay</button>
+  </form>
         </li>
+        <!--<li data-bs-toggle="modal" data-bs-target="#exampleModal2">-->
+        <!--    <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal2">-->
+        <!--        <i class="fa fa-money"></i>Pay-->
+        <!--    </a>-->
+        <!--</li>-->
         <li data-bs-toggle="modal" data-bs-target="#exampleModal">
             <a href="javascript:;">
                 <i class="fa fa-clone"></i>Update Transaction ID
@@ -32,6 +43,8 @@
                 <i class="fa fa-password"></i>Change Password
             </a>
         </li>
+        
     </ul>
+     
     </div>
 </div>
