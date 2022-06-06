@@ -1,5 +1,6 @@
 <?php
 include("../../dbconfig.php");
+date_default_timezone_set('Asia/Kolkata');
 if ($_POST['name'] == "approve") {
     $id = $_POST['id'];
     $sql = "select * from `joinus-data` where id='$id'";

@@ -5,7 +5,7 @@ if (isset($_SESSION['uid'])) {
     $uid = $_POST['userid'];
     $length = $_POST['length'];
     $addno = $_POST['addno'];
-
+    date_default_timezone_set('Asia/Kolkata');
     $sql = "select * from joinus where uid='$uid'";
     $result = $conn->query($sql);
     $row = mysqli_fetch_assoc($result);

@@ -124,7 +124,9 @@ if (isset($_POST['submit'])) {
         }
 
         echo '<script>alert("Registration Successfull..")</script>';
-        echo '<script>document.location.href="./sign-in.php"</script>';
+        echo '<script>location.replace("https://rzp.io/l/8usToKi")</script>';
+        // echo '<script>document.location.replace="https://rzp.io/l/8usToKi"</script>';
+
         // header("Location: ./sign-in.php");
       } else {
         echo '<script>alert("Ooops!!! Something went wrong, try again...")</script>';
